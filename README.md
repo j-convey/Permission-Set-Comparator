@@ -1,6 +1,7 @@
 # Permission Set Comparator (C++ / Qt6)
 
 A small native desktop tool to compare Salesforce permission sets between two users and list permission sets that the mirror user has but the primary user lacks.
+<img width="902" height="832" alt="Permission Set Comparator" src="https://github.com/user-attachments/assets/ea171de1-9d1b-4525-887b-92ab64a7adac" />
 
 ## Overview
 
