@@ -58,6 +58,27 @@ Notes:
 - The app performs tolerant parsing of pasted text — it accepts tab, comma, multi-space, and line-separated lists.
 - Matching is case-insensitive.
 
+## Getting Permission Sets (Salesforce Inspector)
+
+You can quickly export permission set metadata from your Salesforce org using the free "Salesforce Inspector" browser extension.
+
+Steps:
+
+1. Install the Salesforce Inspector extension for Chrome/Edge.
+2. Log in to your Salesforce org in the browser.
+3. Open Salesforce Inspector (click the extension icon while on the Salesforce page).
+4. Choose **Data Export** (or Query) and run this SOQL query to retrieve permission sets that have descriptions:
+
+```sql
+SELECT Id, Name, Label, Description FROM PermissionSet WHERE Description != ''
+```
+
+5. Export the result as CSV and save it as `Permission Sets.csv` in the same folder as the application executable.
+
+Notes:
+- The application uses the `Name` field to match permission set API names; if your CSV contains a different column layout, ensure `Name` is present.
+- Remove any leading columns (for example the Inspector export sometimes has an extra index column); the shipped CSV-cleanup step or the provided PowerShell command can help.
+
 ## Distribution
 
 Place the executable, `Permission Sets.csv`, and the Qt DLLs produced by `windeployqt` into a folder and zip it for distribution.
