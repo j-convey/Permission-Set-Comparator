@@ -25,8 +25,8 @@ Save the CSV as `Permission Sets.csv` and place it in the same folder as the exe
 Example CSV snippet:
 
 ```
-Id,Name,Label,Description
-0PS...,Lightning_Experience_User,Lightning Experience User,Enables the Lightning Experience User permission.
+Permission Set ID,Permission Set API Name,Permission Set Name,Description
+00abc123,View_Setup_and_Configuration,View Setup and Configuration,Allows the view setup and configuration
 ```
 
 ## Building (Windows)
